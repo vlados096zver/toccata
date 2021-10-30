@@ -1,0 +1,86 @@
+@import 'responsive'
+
+.contacts
+	padding-top: 60px
+	padding-bottom: 70px	
+	&__desc
+		padding-bottom: 40px
+		p
+			font-size: 14px
+			line-height: 2.1
+			color: #555
+			letter-spacing: 1px
+			text-align: center
+			text-transform: uppercase
+			span
+				display: block	
+				font-weight: 500	
+
+	&__text
+		font-size: 28px
+		line-height: 1.2
+		color: #323232
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 1px
+		padding-bottom: 20px	
+		font-weight: 300
+
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(sm)
+			margin: 0px	
+
+	&__box
+		width: calc(100% / 2 - 40px)
+		margin: 0 20px
+		margin-bottom: 15px	
+		+media(sm)
+			width: 100%	
+			margin: 0px	
+			margin-bottom: 15px	
+
+	&__box,
+	&__area
+		position: relative
+		margin-bottom: 25px	
+
+	&__input
+		display: block	
+		width: 100%	
+		border: none
+		padding: 12px 10px	
+		border-bottom: 2px solid #313131
+		color: #101010
+		&--area
+			resize: none
+
+		&.form-fail
+			border-color: #b00
+
+		&.form-done
+			border-color: #90ee90
+
+	&__label
+		position: absolute
+		display: block	
+		width: 100%	
+		top: 15px
+		left: 0px
+		padding-left: 12px	
+		font-size: 12px
+		letter-spacing: 2px
+		color: #101010
+		text-transform: uppercase
+		transition: 0.25s font-size, 0.25s top
+		&--active
+			font-size: 12px
+			top: -3px
+
+	&__error
+		color: #b00
+		text-transform: uppercase
+		padding-top: 12px
+		font-weight: 500

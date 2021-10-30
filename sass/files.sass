@@ -1,0 +1,23 @@
+@import 'responsive'
+
+.files
+	padding: 45px 0
+	background-color: #323232
+	padding-top: 105px
+	+media(smdx)
+		padding-top: 45px
+
+	&__wrap
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding-top:  22px
+
+	&__item
+		display: inline-block
+		color: #e74c3c
+		font-size: 18px
+		text-align: center
+		&:not(:last-child)
+			margin-bottom: 32px

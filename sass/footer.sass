@@ -1,0 +1,47 @@
+
+@import 'responsive'
+
+.main-footer
+	position: relative
+	background-color: #141414
+	padding: 80px 0
+	&__text
+		p
+			font-size: 10px
+			line-height: 1
+			letter-spacing: 2px
+			text-transform: uppercase
+			color: #f0f0f0
+			text-align: center
+
+	&__btn
+		cursor: pointer
+		position: absolute
+		left: 50%
+		transition: translateX(-50%)
+		top: -20px
+		display: block
+		width: 40px
+		height: 40px
+		background-color: #141414
+		box-shadow: 0 -5px 15px -5px #000
+		border: none
+		outline: none
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+		&:after,
+		&:before
+			position: absolute
+			content: ''
+			left: 50%
+			width: 8px
+			height: 8px
+			transform: translateX(-50%) rotate(45deg)
+			border-left: 2px solid #e74c3c
+			border-top: 2px solid #e74c3c
+
+		&:after
+			top: calc(50% + 2px)
+			
+		&:before
+			top: calc(50% - 5px)

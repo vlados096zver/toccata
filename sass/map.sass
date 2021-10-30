@@ -1,0 +1,52 @@
+@import 'responsive'
+
+.map
+	&__wrap
+		cursor: pointer
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 100%
+		text-transform: uppercase
+		background-color: #323232
+		padding: 40px
+		font-weight: 300
+
+		&--active
+			opacity: 1
+			visibility: visible
+			.map__btn:after
+				top: calc(50% - 2px)
+				transform: rotate(45deg) scale(-1)
+
+	&__btn
+		cursor: pointer
+		display: block
+		position: relative
+		font-size: 16px
+		line-height: 1.5
+		color: #fff
+		border: none
+		text-transform: uppercase
+		background-color: inherit
+		outline: none
+
+		&:after
+			position: absolute
+			content: ''
+			top: calc(50% - 7px)
+			right: -12px
+			width: 8px
+			height: 8px
+			transform: rotate(45deg)
+			border-right: 2px solid #fff
+			border-bottom: 2px solid #fff
+			transition: 0.2s transform, 0.2s top
+
+	&__block
+		iframe
+			display: block
+			width: 100%
+			min-height: 400px
+			max-height: 80vh

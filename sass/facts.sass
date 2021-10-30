@@ -1,0 +1,52 @@
+@import 'responsive'
+
+.facts
+	background-color: #323232
+	padding: 60px 0
+	+media(smdx)
+		padding-bottom: 20px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+		padding: 0 10px
+		+media(sm)
+			margin: 0px
+			padding: 0px
+
+	&__item
+		width: calc(100% / 4 - 20px)
+		border: 1px solid #fff
+		padding: 5px
+		margin: 10px
+		+media(lgxs)
+			width: calc(100% / 3 - 20px)
+		+media(md)
+			width: calc(100% / 2 - 20px)
+		+media(sm)
+			width: 100%
+			max-width: 450px
+			margin: 0 auto
+
+		&:not(:last-child)
+			+media(sm)
+				margin-bottom: 30px
+
+	&__counter
+		font-size: 60px
+		line-height: 1
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 15px
+		font-weight: 300
+
+	&__desc
+		p
+			font-size: 12px
+			line-height: 1.5
+			color: #fff
+			letter-spacing: 2px
+			text-transform: uppercase
+			text-align: center

@@ -1,0 +1,122 @@
+@import 'responsive'
+
+.rules
+	background-color: #323232
+	padding-top: 70px
+	padding-bottom: 60px
+
+	&__wrap
+		margin-top: 40px	
+
+	&__image
+		img
+			display: block	
+			margin: 0 auto
+
+	&__subtitle
+		position: absolute
+		z-index: 11
+		text-align: center
+		width: 100%
+		color: #fff
+		text-transform: uppercase
+		bottom: -100px
+		left: 0
+		font-weight: 400
+		font-size: 13px
+		line-height: 1
+		letter-spacing: 1px
+		transition: all 200ms linear
+		span
+			transition: all 200ms linear
+
+	&__item
+		display: block	
+		max-width: 500px
+		width: 100%	
+		margin: 0 auto
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 10
+			opacity: 0
+			background: linear-gradient(to bottom,rgba(21,21,21,0.1) 0%,rgba(21,21,21,0.9) 75%)
+			transition: opacity 0.35s, transform 0.35s
+
+		
+
+		&:hover
+			cursor: url(../img/custom_cursor.png) 40 40,crosshair
+			&:after
+				opacity: 1
+
+			.rules__subtitle
+				bottom: 36px
+				transition-delay: .1s
+				span
+					padding-bottom: 5px
+					padding-top: 5px
+					padding-right: 8px
+					padding-left: 8px
+					border: 2px solid #fff
+					transition-delay: .3s
+
+	.swiper-slide
+		padding: 0 20px
+		+media(sm)
+			padding: 0 30px
+
+	.swiper-button-prev,
+	.swiper-button-next
+		width: 60px
+		height: 60px
+		transform: translateY(-50%)	
+		margin: 0px	
+		+media(sm)
+			width: 30px	
+			height: 40px	
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			left: 20px
+			height: 50%
+			width: 2px
+			font-size: 0px	
+			background-color: rgba(255, 255, 255, 0.5)
+			transition: 0.3s background-color
+			+media(sm)
+				left: 8px
+
+		&:after
+			top: 0
+			transform-origin: top left
+			transform: skewX(35deg)
+
+		&:before
+			bottom: 0
+			transform-origin: bottom left
+			transform: skewX(-35deg)
+
+		&:hover
+			&:after,
+			&:before
+				background-color: rgba(255, 255, 255, 1)
+
+	.swiper-button-next
+		right: 10px
+		+media(sm)
+			right: 5px
+
+	.swiper-button-prev
+		left: 10px
+		transform: translateY(-50%)	scaleX(-1) 
+		+media(sm)
+			left: 5px

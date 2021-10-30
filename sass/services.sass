@@ -1,0 +1,55 @@
+@import 'responsive'
+
+.services
+	background-color: #f3f3f3
+	padding: 30px 0
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding: 0 10px
+		margin: 0 -10px
+		margin-top: 10px
+		+media(sm)
+			margin: 0px
+			padding: 0px
+
+	&__item
+		width: calc(100% / 3 - 20px)
+		margin: 0 10px
+		margin-bottom: 30px
+		+media(md)
+			width: calc(100% / 2 - 20px)
+		+media(sm)
+			width: 100%
+			max-width: 450px
+			margin: 0 auto
+
+		&:hover
+			.services__icon img
+				transform: rotate(360deg)
+
+	&__holder
+		transform: translateX(-100%)
+		opacity: 0
+		transition: 1.25s transform, 1.25s opacity
+		&.animate
+			opacity: 1
+			transform: none
+
+	&__icon
+		img
+			width: 25px
+			height: 25px
+			display: block
+			margin: 0 auto
+			transform-origin: center 15px 
+			transition: all 300ms linear
+
+	&__title
+		font-size: 18px
+		line-height: 1.89
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 1px
+		padding-top: 18px
+		font-weight: 300
